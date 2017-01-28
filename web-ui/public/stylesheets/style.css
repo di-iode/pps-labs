@@ -1,0 +1,62 @@
+.fc-v-event {
+  cursor: pointer;
+}
+
+.modal-header, .modal-body {
+  text-align: center;
+}
+
+.network {
+  margin: 2px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.network .title {
+  margin-top: 0px;
+  width: 250px;
+}
+
+.network.fake .title {
+  background: lightgrey;
+}
+
+.network.fake:hover .title {
+  background: grey;
+}
+
+.network .content {
+  min-height: 150px;
+  margin: 0px;
+  border: 1px solid lightgrey;
+  padding: 0px
+}
+
+.network.fake .content {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.wide {
+  width: 100%;
+}
+
+.content.wide {
+  width: 100%;
+}
+
+.machines-list {
+  margin-right: 10px; 
+}
+
+.instance-model {
+  background: lightgrey;
+  padding: 5px;
+  margin: 5px;
+  cursor: grab;
+}
+
+.instance {
+  width:100%;
+  border-bottom: 1px solid lightgrey;
+}

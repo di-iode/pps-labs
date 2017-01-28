@@ -1,0 +1,31 @@
+{
+  "name": "pps-labs",
+  "version": "0.0.1",
+  "description": "Service qui crée des labs sur le cloud",
+  "main": "module.js",
+  "standard": {
+    "globals": [
+      "angular",
+      "DayPilot"
+    ]
+  },
+  "scripts": {
+    "test": "mocha --recursive tests/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/PepperLabs/pps-labs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PepperLabs/pps-labs/issues"
+  },
+  "homepage": "https://github.com/PepperLabs/pps-labs#readme",
+  "dependencies": {
+    "angular-ui-calendar": "^1.0.2",
+    "ejs": "^2.5.5",
+    "express": "^4.14.0",
+    "fullcalendar": "^3.1.0"
+  }
+}

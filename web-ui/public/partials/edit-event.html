@@ -1,0 +1,81 @@
+﻿<div id='resource'>
+  <div class='machines-list'>
+    <div class='title'>
+      Modèles de machines
+    </div>
+    <div class='content'>
+      <div class='instance-model' ng-repeat="template in templates" elem-drag='template'>
+        <a class='pointer' ng-click='editInstanceModel(template)'>{{template.name}}</a>
+      </div>
+      <button class='btn btn-link' ng-click='editInstanceModel()'>Ajouter</button>
+    </div>
+  </div>
+  <div class='wide'>
+    <div class='title'>
+      Édition du lab
+    </div>
+    <div class='content wide'>
+      <div class='modal-header'>
+        <h3 class='modal-title' id='modal-title'>
+          {{ev.title}}
+        </h3>
+        <h4 class='modal-title' id='modal-subtitle'>
+          {{ev.school}} {{ev.promo}} Groupe {{ev.group}}
+        </h4>
+        <h5 class='modal-title' id='modal-subtitle'>
+          Séance du {{ev.start._d|date: 'dd/MM/yy'}} de 
+          {{ev.start|date: 'hh:mm'}} à {{ev.end|date: 'hh:mm'}}
+        </h5>
+      </div>
+      <div ng-init='createLab = false' class='modal-body' id='modal-body'>
+        <div ng-hide='createLab'>
+          <button class='btn btn-success' ng-click='createLab = true'>
+            Créer un lab pour cette séance
+          </button>
+          <button class='btn btn-success' ng-click='useTpl'>
+            Utiliser un modèle de lab
+          </button>
+        </div>
+        <div ng-if='createLab == true' style='text-align: left'>
+          <div class='network' ng-repeat='network in networks'>
+            <div class="title">
+              <span class='glyphicon glyphicon-remove pointer'
+                 ng-if='$index > 0 || networks.length > 1' ng-click='rmNetwork($index)'></span>
+              Réseau {{$index + 1}}
+            </div>
+            <div class="content" 
+              elem-drop='network'>
+              <span ng-show="!network.length">Veuillez déposer des machines ici</span>
+              <div ng-repeat="conf in network" class='instance'>
+                <span class='glyphicon glyphicon-remove pointer' ng-click='rmInstance(network, $index)'></span>
+                {{conf.name}} - <a class='pointer' ng-click='editInstanceModel(conf)'>Edit</a>
+              </div>
+            </div>
+          </div>
+          <div class='network fake pointer' ng-show='networks.length < 3' ng-click='addNetwork()'>
+            <div class='title'>
+              <span style='visibility:hidden'>yolo</span>
+            </div>
+            <div class='content'>
+              <span>Ajouter un réseau</span>
+            </div>
+          </div>
+          <div>
+            <div ng-show='networks.length == 3'>Le nombre maximum de réseaux a été atteint</div>
+          </div>
+          <div>
+           <h5>Modèles de machines</h5>
+          </div>
+        </div>
+      </div>
+      <div class='modal-footer' style='text-align: center'>
+        <button ng-disabled='notFinished()' class="btn btn-success" type="button" ng-click="ok(true)">
+          Sauvegarder comme modèle
+        </button>
+        <button ng-disabled='notFinished()' class="btn btn-primary" type="button" ng-click="ok()">Enregistrer</button>
+        <button class="btn btn-warning" type="button" ng-click="cancel()">Annuler</button>
+
+      </div>
+    </div>
+  </div>
+</div>

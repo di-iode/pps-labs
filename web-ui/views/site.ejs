@@ -1,0 +1,71 @@
+<!doctype html>
+
+<html lang="fr" ng-app="uploadsApp">
+<head>
+  <meta charset="utf-8">
+
+  <title ng-bind="'PepperLabs | ' + title">PepperLabs</title>
+
+  <!-- Start favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon-57x57.png?v=gAAjrr46ql">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/apple-touch-icon-60x60.png?v=gAAjrr46ql">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png?v=gAAjrr46ql">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon-76x76.png?v=gAAjrr46ql">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png?v=gAAjrr46ql">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/apple-touch-icon-120x120.png?v=gAAjrr46ql">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/apple-touch-icon-144x144.png?v=gAAjrr46ql">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/apple-touch-icon-152x152.png?v=gAAjrr46ql">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon-180x180.png?v=gAAjrr46ql">
+  <link rel="icon" type="image/png" href="/img/favicon-32x32.png?v=gAAjrr46ql" sizes="32x32">
+  <link rel="icon" type="image/png" href="/img/favicon-194x194.png?v=gAAjrr46ql" sizes="194x194">
+  <link rel="icon" type="image/png" href="/img/favicon-96x96.png?v=gAAjrr46ql" sizes="96x96">
+  <link rel="icon" type="image/png" href="/img/android-chrome-192x192.png?v=gAAjrr46ql" sizes="192x192">
+  <link rel="icon" type="image/png" href="/img/favicon-16x16.png?v=gAAjrr46ql" sizes="16x16">
+  <link rel="manifest" href="/img/manifest.json?v=gAAjrr46ql">
+  <link rel="shortcut icon" href="/img/favicon.ico?v=gAAjrr46ql">
+  <meta name="apple-mobile-web-app-title" content="PepperLabs Services">
+  <meta name="application-name" content="PepperLabs Services">
+  <meta name="msapplication-TileColor" content="#2b5797">
+  <meta name="msapplication-TileImage" content="/img/mstile-144x144.png?v=gAAjrr46ql">
+  <meta name="msapplication-config" content="/img/browserconfig.xml?v=gAAjrr46ql">
+  <meta name="theme-color" content="#ffffff">
+  <!-- End favicon -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="/stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="fullcalendar/dist/fullcalendar.css" rel="stylesheet" type="text/css">
+  <link href="/admin/stylesheets/style.css" rel="stylesheet" type="text/css">
+  <link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+
+  <!-- <libs> -->
+  <script src="jquery/dist/jquery.min.js"></script>
+  <script src="moment/min/moment.min.js"></script>
+  <script src="/angular/angular.min.js"></script>
+
+  <script src="/angular-translate/dist/angular-translate.min.js"></script>
+  <script src="/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="/angular-ui-bootstrap/ui-bootstrap.min.js"></script>
+  <script src="/angular-ui-bootstrap/ui-bootstrap-tpls.min.js"></script>
+  <script src="/angular-resource/angular-resource.min.js"></script>
+
+  <script src="angular-ui-calendar/src/calendar.js"></script>
+  <script src="fullcalendar/dist/fullcalendar.min.js"></script>
+  <script src="fullcalendar/dist/gcal.js"></script>
+  <!-- </libs> -->
+  <!-- <app-components> -->
+  <script src="javascripts/services.js"></script>
+  <script src="javascripts/app.js"></script>
+  <script src="javascripts/controllers.js"></script>
+  <script src="javascripts/directives.js"></script>
+  <script src="/javascripts/user_module/userModule.js"></script>
+  <script src="/javascripts/user_module/userControllers.js"></script>
+  <script src="/javascripts/background.js"></script>
+  <!-- </app-components> -->
+</head>
+<body ng-controller='MainCtrl' >
+  <toast class="server-info" id="info" ng-show="info" ng-class="{'bg-success': infoGood, 'bg-danger': !infoGood}" toast-info="info"></toast>
+  <section ui-view></section>
+  <!--<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,900' rel='stylesheet' type='text/css'>-->
+</body>
+</html>
