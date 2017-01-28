@@ -2,7 +2,7 @@
   "name": "pps-labs",
   "version": "0.0.1",
   "description": "Service qui crée des labs sur le cloud",
-  "main": "module.js",
+  "main": "web-ui/module.js",
   "standard": {
     "globals": [
       "angular",
