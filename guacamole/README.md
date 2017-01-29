@@ -12,5 +12,6 @@ Les fichiers :
  * user-mapping-SSH.xml
  * user-mapping-VNC.xml
  * user-mapping-RDP.xml
+ 
 -
 explicite la construction pour ces différents protocoles.
