@@ -8,7 +8,7 @@ Le site est alors disponible à "IPmachine:8080/guacamole", pour le faire passer
 Gestions des utilisateurs et machines dans le fichier  /usr/share/jetty8/.guacamole/user-mapping.xml.
 
 Dans le dossier utilisateurs, le fichier user-mapping.xml en est un exemple. Les fichiers 
-  user-mapping-SSH.xml
+  user-mapping-SSH.xml \n
   user-mapping-VNC.xml
   user-mapping-RDP.xml
 explicite la construction pour ces différents protocoles.
