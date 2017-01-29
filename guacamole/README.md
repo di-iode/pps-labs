@@ -13,4 +13,4 @@ Les fichiers :
  * user-mapping-VNC.xml
  * user-mapping-RDP.xml
     
-explicite la construction pour ces différents protocoles.
+explicitent la construction pour ces différents protocoles.
